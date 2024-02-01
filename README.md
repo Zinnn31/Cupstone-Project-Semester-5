@@ -6,5 +6,5 @@ There have 4 features :
 4. Feedback
 
    
-Please Download model at this link drive to start this project
+Please Download model at this link drive to start this project and put that models under the classes.pkl file
 https://drive.google.com/drive/folders/1baDdOlaSJ1mDYtNvPzSkPL93eFYOyWP_?usp=sharing
