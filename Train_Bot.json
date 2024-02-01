@@ -1,0 +1,89 @@
+{"intents": [
+        {"tag": "Intro",
+         "patterns": ["hai", 
+                      "apa kabar", 
+                      "ada orang", 
+                      "halo",
+                      "hallo", 
+                      "whats up",
+                      "hei",
+                      "yo",
+                      "dengarkan", 
+                      "tolong bantu saya",
+                      "online",
+                      "hei kamu",
+                      "berbicara denganmu untuk pertama kali",
+                      "jelaskan tentang anda",
+                      "mulai",
+                      "obrolan",
+                      "mulai obrolan"],
+         "responses": ["Halo! Saya adalah Chatbot topik luka yang digunakan dalam forensik medis.\nKetik : 'luka bakar', 'luka lecet', 'luka memar', 'luka robek', 'luka sayatan', 'luka tusuk' untuk informasi lebih lanjut mengenai pembahasan luka-luka tersebut."],
+         "context_set": ""
+        },
+
+        {"tag": "Exit",
+         "patterns": ["terima kasih", 
+                      "terima kasih", 
+                      "sampai jumpa",
+                      "sampai jumpa",
+                      "nanti",
+                      "sampai jumpa nanti",
+                      "selamat tinggal",
+                      "saya pergi",
+                      "selamat hari",
+                      "harimu menyenangkan",
+                      "kamu telah membantuku",
+                      "terima kasih banyak",
+                      "terima kasih banyak",
+                      "kamu yang terbaik",
+                      "bantuan besar",
+                      "terlalu baik",
+                      "selesai",
+                      "keluar",
+                      "keluar menu",
+                      "keluar menu chatbot",
+                      "keluar dari chatbot",
+                      "keluar chatbot",
+                      "dadah",
+                      "kamu adalah teman belajar yang baik"],
+         "responses": ["Senang dapat membantu Anda, Selamat Tinggal."],
+         "context_set": ""
+        },
+
+        {"tag": "luka_bakar",
+         "patterns": ["luka bakar"],
+         "responses": ["Luka bakar dalam konteks forensik medis dapat memberikan petunjuk penting terkait kejadian. Ini bisa disebabkan oleh paparan langsung dengan sumber panas, seperti api atau cairan panas, yang perlu dianalisis untuk menentukan aspek hukum.\nDalam penanganan luka bakar forensik, memeriksa sejauh mana kerusakan kulit dan melibatkan ahli forensik medis untuk dokumentasi yang akurat sangat penting."],
+         "context_set": ""
+        },
+    
+        {"tag": "luka_lecet",
+         "patterns": ["luka lecet"],
+         "responses": ["Dalam forensik medis, luka lecet dapat memberikan petunjuk penting terkait kejadian tertentu, sering kali berkaitan dengan aktivitas atau kontak langsung dengan permukaan kasar.\nAnalisis forensik pada luka lecet melibatkan penilaian lokasi, jumlah, dan pola cedera untuk membantu merinci dinamika insiden yang terkait.\nLuka lecet dapat menjadi sumber informasi berharga dalam investigasi forensik, membantu mengidentifikasi konteks kejadian atau kemungkinan kontribusi dari perbuatan seseorang."],
+         "context_set": ""
+        },
+
+        {"tag": "luka_memar",
+        "patterns": ["luka memar"],
+        "responses": ["Analisis forensik pada luka memar melibatkan penentuan kedalaman cedera, perbandingan dengan laporan kejadian, dan penilaian terhadap potensi tindak kekerasan atau penyiksaan. Ahli forensik medis biasanya akan mendokumentasikan temuan ini secara seksama.\nRelevansi luka memar dalam forensik medis juga dapat membantu dalam mengidentifikasi kemungkinan pelaku atau saksi yang terlibat dalam insiden. Keakuratan analisis forensik sangat penting dalam mendukung proses investigasi hukum.\nSebagai contoh, luka memar dapat diakibatkan oleh pukulan keras atau tekanan eksternal yang perlu diidentifikasi dan dianalisis untuk menetapkan aspek hukum terkait kasus tersebut."],
+        "context_set": ""
+        },
+        
+        {"tag": "luka_robek",
+        "patterns": ["luka robek"],
+        "responses": ["Dalam forensik medis, luka robek dapat memberikan informasi signifikan tentang kekerasan atau aktivitas tertentu selama kejadian.\nAnalisis forensik pada luka robek melibatkan penilaian panjang, kedalaman, dan bentuk cedera untuk membantu memahami dinamika insiden secara lebih rinci.\nLuka robek dapat menjadi petunjuk vital dalam proses investigasi forensik, membantu identifikasi pola cedera yang mungkin berkaitan dengan kejadian atau tindak kekerasan tertentu.\nSebagai contoh, luka robek dapat disebabkan oleh tarikan, tekanan eksternal, atau kontak dengan benda tajam, dan dianalisis untuk menetapkan aspek hukum terkait kasus tersebut."],
+        "context_set": ""
+        },
+
+        {"tag": "luka_sayatan",
+        "patterns": ["luka sayatan"],
+        "responses": ["Dalam forensik medis, luka sayatan dapat memberikan petunjuk yang signifikan terkait dengan tujuan dan metode kekerasan yang mungkin terlibat dalam kejadian.\nAnalisis forensik pada luka sayatan melibatkan penilaian panjang, kedalaman, dan pola sayatan untuk membantu rekonstruksi kejadian secara lebih rinci.\nLuka sayatan dapat menjadi fokus penting dalam investigasi forensik, membantu mengidentifikasi potensi niat atau keadaan sekitar terjadinya cedera tersebut.\nSebagai contoh, luka sayatan bisa disebabkan oleh benda tajam atau alat tertentu, seringkali menunjukkan adanya tindak kekerasan yang disengaja dan perlu diidentifikasi untuk aspek hukum penyelidikan."],
+        "context_set": ""
+        },
+
+        {"tag": "luka_tusuk",
+        "patterns": ["luka tusuk"],
+        "responses": ["Dalam forensik medis, luka tusuk dapat memberikan petunjuk yang signifikan terkait dengan metode kekerasan dan kemungkinan tujuan tertentu yang terlibat dalam suatu kejadian.\nAnalisis forensik pada luka tusuk melibatkan penilaian kedalaman, panjang, dan arah tusukan untuk membantu merekonstruksi kejadian secara lebih rinci.\nLuka tusuk sering menjadi fokus utama dalam investigasi forensik, membantu mengidentifikasi kemungkinan niat kekerasan dan memberikan wawasan penting terkait dengan konteks insiden.\nSebagai contoh, luka tusuk dapat disebabkan oleh benda tajam atau alat tertentu, menunjukkan tindakan yang disengaja dan dapat menjadi petunjuk dalam menentukan aspek hukum pada kasus forensik medis."],
+        "context_set": ""
+        }
+   ]
+}
