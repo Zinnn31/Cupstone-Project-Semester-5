@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Deteksi Luka</title>
+    <link rel="icon" href="/static/image/logo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="hero">
+        <video autoplay loop muted plays-inline class="videoback">
+            <source src="/static/image/background.mp4" type="video/mp4">
+        </video>
+        <nav>
+            <a href="{{ url_for('home') }}">
+                <img src="/static/image/logo.png" class="logo">
+            </a>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('deteksi') }}">Deteksi</a></li>
+                <li><a href="{{ url_for('deteksi_history') }}">Histori Deteksi</a></li> 
+                <li><a href="{{ url_for('chatbot') }}">Chatbot</a></li>
+                <li><a href="{{ url_for('feedback') }}">Feedback</a></li>
+            </ul>
+        </nav>
+        <div class="detel">
+            <h3>Welcome, <span>To Website Deteksi Luka</span></h3>
+            <h4>Ini adalah website Deteksi Luka.<br>Tekan untuk mulai deteksi.</h4>
+            <a href="{{ url_for('deteksi') }}">Mulai Deteksi Luka</a>
+        </div>
+    </div>
+</body>
+</html>

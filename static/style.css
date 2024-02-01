@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #555; 
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    max-width: 300px; /* Sesuaikan dengan ukuran yang diinginkan */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #555; /* Ganti dengan warna latar belakang yang diinginkan */
+    border-radius: 10px;
+    box-shadow: 0 0 10px white;
+    text-align: center;
+}
+
+h1.glowing-text {
+    color: white;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50; /* Warna hijau */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Warna hijau yang sedikit lebih gelap pada hover */
+}
+
+p {
+    margin-top: 15px;
+}
+
+p a {
+    color: #00d307; /* Warna hijau untuk tautan "Daftar" */
+}
+
+p a:hover {
+    color: #008106; /* Warna hijau yang sedikit lebih gelap pada hover */
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    width: 250px;
+    padding: 20px;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: white;
+}
+
+input[type="text"],
+input[type="password"] {
+    background: black;
+    color: #fff;
+    border: 2px solid #00d9ff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.videoback{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    width: 84%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 70px; 
+    height: 70px; 
+    object-fit: contain; 
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+.images {
+    width: 25%;
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+.images img {
+    height: 70%;
+    position: absolute;
+    left: 30%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.images:hover .shape {
+    bottom: 40px;
+}
+
+.images:hover .dokter {
+    left: 45%;
+}

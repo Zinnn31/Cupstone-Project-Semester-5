@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Histori Deteksi - Web Deteksi Luka</title>
+    <link rel="icon" href="/static/image/logo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+</head>
+<body>
+    <div class="hero">
+        <video autoplay loop muted plays-inline class="videoback">
+            <source src="/static/image/background.mp4" type="video/mp4">
+        </video>
+        <nav>
+            <a href="{{ url_for('home') }}">
+                <img src="/static/image/logo.png" class="logo">
+            </a>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('deteksi') }}">Deteksi</a></li>
+                <li><a href="{{ url_for('deteksi_history') }}">Histori Deteksi</a></li>
+                <li><a href="{{ url_for('chatbot') }}">Chatbot</a></li>
+                <li><a href="{{ url_for('feedback') }}">Feedback</a></li>
+            </ul>
+        </nav>
+        <div class="container mt-5">
+            <h2 class="section-title">Histori Deteksi Luka</h2>
+            <ul class="deteksi-history">
+                {% for deteksi_history in deteksi_history_list %}
+                <li>
+                    <img src="{{ url_for('static', filename=deteksi_history[0].replace('\\', '/')) }}" alt="Deteksi Image">
+                    <p>Hasil Deteksi : {{ deteksi_history[1] }}</p>
+                    <p>Waktu Deteksi : {{ deteksi_history[2].strftime('%Y-%m-%d %H:%M:%S') }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".deteksi-history").slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true,  // Tampilkan panah navigasi
+                prevArrow: '<button type="button" class="slick-prev">&#8249;</button>',
+                nextArrow: '<button type="button" class="slick-next">&#8250;</button>',
+                dots: false,
+                pauseOnHover: true
+            });
+        });
+    </script>
+</body>
+</html>

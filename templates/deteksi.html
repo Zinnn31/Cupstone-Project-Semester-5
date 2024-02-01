@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Deteksi - Web Deteksi Luka</title>
+    <link rel="icon" href="/static/image/logo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="hero">
+        <video autoplay loop muted plays-inline class="videoback">
+            <source src="/static/image/background.mp4" type="video/mp4">
+        </video>
+        <nav>
+            <a href="{{ url_for('home') }}">
+                <img src="/static/image/logo.png" class="logo">
+            </a>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('deteksi') }}">Deteksi</a></li>
+                <li><a href="{{ url_for('deteksi_history') }}">Histori Deteksi</a></li>
+                <li><a href="{{ url_for('chatbot') }}">Chatbot</a></li>
+                <li><a href="{{ url_for('feedback') }}">Feedback</a></li>
+            </ul>
+        </nav>
+        <div class="container mt-5">
+            <h2 class="section-title">Masukkan gambar luka yang ingin anda deteksi di bawah</h2>
+            <form action="/deteksi" method="POST" enctype="multipart/form-data" class="form">
+                <input type="file" name="image" accept=".jpg, .jpeg, .png" class="form-control" required>
+                <button type="submit" class="btn-primary">Deteksi Luka</button>
+            </form>
+            <div class="result mt-3">
+                {% if result %}
+                    <h3 class="result-title">Gambar Ini Termasuk Jenis : {{ result }}</h3>
+                    <img src="/static/{{uploaded_image}}" class="result-image" alt="Uploaded Image">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

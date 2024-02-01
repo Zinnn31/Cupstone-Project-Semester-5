@@ -1,0 +1,58 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Feedback - Web Deteksi Luka</title>
+    <link rel="icon" href="/static/image/logo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="hero">
+        <video autoplay loop muted plays-inline class="videoback">
+            <source src="/static/image/background.mp4" type="video/mp4">
+        </video>
+        <nav>
+            <a href="{{ url_for('home') }}">
+                <img src="/static/image/logo.png" class="logo">
+            </a>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('deteksi') }}">Deteksi</a></li>
+                <li><a href="{{ url_for('deteksi_history') }}">Histori Deteksi</a></li>
+                <li><a href="{{ url_for('chatbot') }}">Chatbot</a></li>
+                <li><a href="{{ url_for('feedback') }}">Feedback</a></li>
+            </ul>
+        </nav>
+        <form method="post" action="/predict" class="form-feedback">
+            <label for="feedback">Masukkan feedback anda terhadap pengalaman menggunakan website ini</label>
+            <textarea name="feedback" rows="4" cols="50" required></textarea>
+            <br>
+            <button type="submit">Kirim</button>
+        </form>
+        {% if user_input %}
+        <div class="result-container">
+            <div class="inputan">
+                <p>Kalimat feedback anda : <span id="user-input">{{ user_input }}</span></p>
+            </div>
+            <div class="hasil">
+                <p>Termasuk ke dalam feedback : <span id="sentiment-result">{{ sentiment_result }}</span></p>
+            </div>
+        </div>
+        <div class="bar-chart">
+            <h3>Rating Website terhadap hasil Feedback dari user</h3>
+            <div class="bar positif" style="width: {{ positive_percentage }}%">
+                <img src="/static/image/positif_icon.png" alt="Positif Icon" class="bar-icon">
+            </div>
+            <div class="bar netral" style="width: {{ neutral_percentage }}%">
+                <img src="/static/image/netral_icon.png" alt="Netral Icon" class="bar-icon"> 
+            </div>
+            <div class="bar negatif" style="width: {{ negative_percentage }}%">
+                <img src="/static/image/negatif_icon.png" alt="Negatif Icon" class="bar-icon"> 
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
